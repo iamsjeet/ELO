@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELO — Trust What Real People Rate</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="app-page">
+
+  <!-- ════════════════════════════════════
+       NAVBAR
+       ════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-in">
+      <a href="#" class="logo">ELO</a>
+
+      <div class="nav-links">
+        <a href="#"           class="nav-link active">Home</a>
+        <a href="#categories" class="nav-link">Categories</a>
+        <a href="#how-elo"    class="nav-link">Help</a>
+      </div>
+
+      <div class="nav-user" id="nav-user">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════
+       HERO
+       ════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-in">
+
+      <!-- Left copy -->
+      <div class="hero-left">
+        <div class="hero-tag">
+          <span class="hero-tag-dot"></span>
+          ELO-Based Ratings
+        </div>
+
+        <h1 class="hero-h1">
+          TRUST WHAT<br>
+          <span class="ac">REAL PEOPLE</span><br>
+          RATE.
+        </h1>
+
+        <p class="hero-sub">
+          ELO-based ratings. Real experiences. Better choices.<br>
+          The community decides what's truly worth your money.
+        </p>
+
+        <div class="hero-btns">
+          <button class="btn-primary" id="btn-explore">
+            Explore Now
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.5">
+              <polyline points="9,18 15,12 9,6"/>
+            </svg>
+          </button>
+          <button class="btn-ghost" id="btn-how">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8"  x2="12"    y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            How ELO Works
+          </button>
+        </div>
+      </div>
+
+      <!-- Right visual -->
+      <div class="hero-right">
+        <div class="hero-visual">
+
+          <!-- Main card (headphones) -->
+          <div class="hv-card hv-main">
+            <img
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80"
+              alt="Electronics" loading="eager"
+            />
+          </div>
+
+          <!-- Side left (book) -->
+          <div class="hv-card hv-left">
+            <img
+              src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&q=80"
+              alt="Books" loading="eager"
+            />
+          </div>
+
+          <!-- Side right (jacket) -->
+          <div class="hv-card hv-right">
+            <img
+              src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&q=80"
+              alt="Fashion" loading="eager"
+            />
+          </div>
+
+          <!-- ELO badge -->
+          <div class="hv-badge">
+            <span class="hv-badge-t">ELO</span>
+            <span class="hv-badge-s">Live Ratings</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       SEARCH BAR
+       ════════════════════════════════════ -->
+  <section class="search-section">
+    <div class="search-wrap">
+      <div class="search-bar">
+        <svg class="search-ico" width="20" height="20" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input
+          type="text"
+          id="search-input"
+          class="search-inp"
+          placeholder="Search products, categories…"
+          autocomplete="off"
+        />
+        <button class="search-btn">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       CATEGORIES
+       ════════════════════════════════════ -->
+  <section class="cat-section" id="categories">
+    <div class="section-wrap">
+      <div class="section-hd reveal">
+        <h2 class="section-title">Categories</h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="cat-grid">
+
+        <div class="cat-card reveal" data-category="Books">
+          <img
+            src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=700&q=80"
+            alt="Books" class="cat-img" loading="lazy"
+          />
+          <div class="cat-overlay"></div>
+          <div class="cat-con">
+            <div class="cat-icon">📚</div>
+            <h3 class="cat-name">Books</h3>
+            <span class="cat-pill">ELO Ranked</span>
+          </div>
+        </div>
+
+        <div class="cat-card reveal" data-category="Electronics">
+          <img
+            src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=700&q=80"
+            alt="Electronics" class="cat-img" loading="lazy"
+          />
+          <div class="cat-overlay"></div>
+          <div class="cat-con">
+            <div class="cat-icon">⚡</div>
+            <h3 class="cat-name">Electronics</h3>
+            <span class="cat-pill">ELO Ranked</span>
+          </div>
+        </div>
+
+        <div class="cat-card reveal" data-category="Fashion">
+          <img
+            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=700&q=80"
+            alt="Fashion" class="cat-img" loading="lazy"
+          />
+          <div class="cat-overlay"></div>
+          <div class="cat-con">
+            <div class="cat-icon">👗</div>
+            <h3 class="cat-name">Fashion</h3>
+            <span class="cat-pill">ELO Ranked</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       PRODUCTS
+       ════════════════════════════════════ -->
+  <section class="prod-section">
+    <div class="section-wrap">
+      <div class="section-hd">
+        <h2 class="section-title" id="prod-title">Top Rated Products</h2>
+        <div class="section-rule"></div>
+      </div>
+      <!-- Filled by JS -->
+      <div class="prod-grid" id="prod-grid"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       HOW ELO WORKS
+       ════════════════════════════════════ -->
+  <section class="how-section" id="how-elo">
+    <div class="section-wrap">
+      <div class="section-hd center reveal">
+        <h2 class="section-title">How ELO Works</h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="how-grid">
+
+        <div class="how-card reveal">
+          <span class="how-icon">💬</span>
+          <h3>Real User Reviews</h3>
+          <p>Genuine community insights from real people who've used the products.</p>
+        </div>
+
+        <div class="how-card reveal">
+          <span class="how-icon">📊</span>
+          <h3>Dynamic Scoring</h3>
+          <p>Adaptive ELO ratings that update every time users compare products head-to-head.</p>
+        </div>
+
+        <div class="how-card reveal">
+          <span class="how-icon">✅</span>
+          <h3>Better Choices</h3>
+          <p>Find the best products based on what the community actually prefers.</p>
+        </div>
+
+        <div class="how-card reveal">
+          <span class="how-icon">🔄</span>
+          <h3>Always Up-To-Date</h3>
+          <p>Ratings are constantly refreshed as more people interact with the system.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-in">
+      <span class="logo">ELO</span>
+      <p>© 2025 ELO Rating System · Trust what real people rate.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

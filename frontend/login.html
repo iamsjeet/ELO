@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELO — Who's Logging In?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="login-page">
+
+  <!-- Particle canvas -->
+  <canvas id="particles"></canvas>
+
+  <div class="login-wrap">
+
+    <!-- Logo -->
+    <div class="login-logo">
+      <span class="logo">ELO</span>
+    </div>
+
+    <!-- Heading -->
+    <h1 class="login-title">
+      WHO'S <span class="ac">LOGGING IN?</span>
+    </h1>
+    <p class="login-sub">Select your profile to continue.</p>
+
+    <!-- User cards — filled by JS -->
+    <div class="user-grid" id="user-grid"></div>
+
+    <!-- Manage button -->
+    <button class="manage-btn">Manage Profiles</button>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
